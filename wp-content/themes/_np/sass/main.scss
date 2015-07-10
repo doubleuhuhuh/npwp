@@ -1,0 +1,87 @@
+/*===================================================================================*/
+/*	NP MAIN
+/*===================================================================================*/
+
+//===== INCLUDES =====//
+
+
+//===== Global =====//
+@import 'global/colors.scss';
+
+//===== Global Mixins =====//
+@import 'mixins/anima.scss';
+@import 'mixins/flipper.scss';
+
+@import 'header.scss';
+@import 'frontpage.scss';
+@import 'footer.scss';
+@import 'portfolio.scss';
+@import 'modals.scss';
+@import 'services.scss';
+
+//@import 'callout.scss';
+
+
+
+//===== END INCLUDES =====//
+
+
+a {
+	color: $off-black;
+	&:visited,
+	&:active {
+		color: $off-black;
+	}
+	&:hover {
+		color: white;
+	}
+}
+
+.np-darkgray {
+	background-color: $np-darkGray;
+}					
+.np-red {
+	background-color: $np-red;
+}
+.np-blue {
+	background-color: $np-blue;
+}	
+.np-tan {
+	background-color: $np-tan;	
+}	
+.np-gray {
+	background-color: $np-gray;
+}	
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}

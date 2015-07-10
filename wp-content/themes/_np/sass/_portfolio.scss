@@ -1,0 +1,38 @@
+/* Porfolio */
+.portfolio {
+    padding: 50px 0;
+    height: 575px;
+    background-color: $np-blue;
+
+    .container {
+        margin-left: 6%; 
+    }
+
+    .portBrief {
+        padding: 0 25px 15px;
+        font-size: 16px;
+    } 
+
+    .uau-flip {
+        h4 {
+            padding-bottom: 15px;
+        }
+    }
+
+    /* flipper logos */
+    .curbLogo {
+        padding-top: 30px;
+        width: 65%;
+    }
+    .egLogo {
+      padding-top: 20px;
+    }
+    .uauLogo {
+      border-radius: 50%;
+      width: 200px;
+    }
+
+    .mob-port-container {
+        display: none;
+    }
+}

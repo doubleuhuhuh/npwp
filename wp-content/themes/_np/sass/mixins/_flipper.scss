@@ -1,0 +1,126 @@
+//===== Common Styles =====//
+@import 'global/colors';
+
+//======== CARD FLIPPER =======//
+
+
+//======== HTML Usage Example =======//
+/*
+
+<div class="flip-container ontouchstart="this.classList.toggle('hover');"">
+	<div class="flipper">
+		<div class="front">
+		
+		</div>
+	    <div class="back">
+
+	    </div>
+	</div>
+</div>
+
+*/
+//===================================//
+
+
+//MIXIN'S
+//Sets the perspective of the 3D element with the given value
+@mixin flipperPerspective($perspective) {
+	
+	-webkit-perspective: ($perspective);
+	-moz-perspective: ($perspective);
+	-ms-perspective: ($perspective);
+	perspective: ($perspective);
+	-ms-transform: perspective($perspective+px);  //HERE - NP not sure if that is the right syntax. 
+	-moz-transform: perspective($perspective+px); // ^^ http://stackoverflow.com/questions/14579953/sass-import-variables-to-be-used-in-mixin
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+
+}
+
+// Sets the flipper's Y rotation forward or backward
+@mixin flipperFacing($forward: true) {
+
+	// Flipper is forward
+	@if $forward == true {
+		// 0deg rotation
+		-webkit-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+
+	} @else {
+		// 180deg rotation
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+
+	}
+
+}
+ 
+//========== SCSS ===========//
+
+.flip-container{
+	@include flipperPerspective(1000);
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+	@include flipperFacing(false);
+}
+
+.flip-container {
+	margin-top: 40px;
+}
+
+.flip-container, .front, .back {
+	padding-top: 25px;
+	height: 375px;
+	width: 300px; //TODO take out
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  	-o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	background-color: $white;
+	// z-index: 2; //turn off so back wouldn't show in firefox
+}
+
+.back {
+	@include flipperFacing(false);
+	background: $white;
+}
+
+
+
+
+
+	

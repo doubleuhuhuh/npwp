@@ -1,0 +1,69 @@
+#colophon {
+	display: none;
+} 
+
+
+i.scroll {
+  color: #333333;
+}
+
+i.scroll:hover {
+  color: #0a5175;
+}
+
+.socialIcons {
+    padding-top: 35px;
+    .list-inline > li:first-child {
+        padding-left: 9px;
+    }
+    li {
+        padding: 12px 10px 0px 10px;
+        width: 60px;
+        height: 60px;
+        margin:0 10px;
+        background-size: 100% 200%;
+        border-radius: 50%;
+        -webkit-transition: background-position .5s;
+        -moz-transition: background-position .5s;
+        transition: background-position .5s;
+    }
+    li:hover a {
+        color: white;
+    }
+    .sentToMail {
+           background-image: linear-gradient(to top,  $darker-gray 50%, $white 50%);
+    }
+    .sentToMail:hover {
+        background-position: 0 -100%;
+    }
+    .linkedIn {
+        background-image: linear-gradient(to top, $linkedin 50%, $white 50%);
+    }
+    .linkedIn:hover {
+        background-position: 0 -100%;
+    }
+    .tumblr {
+        background-image: linear-gradient(to top, $tumblr 50%, $white 50%);
+    }
+    .tumblr:hover {
+        background-position: 0 -100%;
+    }
+    .facebookIcon {
+        background-image: linear-gradient(to top, $facebook 50%, $white 50%);
+    }
+    .facebookIcon:hover {
+        background-position: 0 -100%;
+    }
+    .gplusIcon {
+        background-image: linear-gradient(to top, $gplus 50%, $white 50%);
+    }
+    .gplusIcon:hover {
+        background-position: 0 -100%;
+    }
+    .wordPress {
+        background-image: linear-gradient(to top, $gplus 50%, $white 50%);
+    }
+    .wordPress:hover {
+        background-position: 0 -100%;
+    }
+}
