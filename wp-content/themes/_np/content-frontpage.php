@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package OhmzTech
+ * @package _np
  */
 ?>
 
@@ -123,7 +123,7 @@
 		                                </div>
 		                                
 		                                <!-- UpandUnderModal -->
-		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uauModal">
+		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#card_1_modal">
 		                                  More Information
 		                                </button>
 		                            </div>
@@ -289,8 +289,24 @@
                         </div> -->
                         <hr>
                         <div class="footerMenu">
-                        	<a href="#top">Home  </a>-<a href="#portfolio">  Portfolio  </a>-<a href="#about">  About  </a>-<a href="#callout">  Contact</a>
-	                        <p style="text-align:center;">Nathan Peters &copy;</p>
+                        	<!-- <a href="#top">Home  </a>-<a href="#portfolio">  Portfolio  </a>-<a href="#about">  About  </a>-<a href="#callout">  Contact</a> -->
+	                        <!-- <p style="text-align:center;">Nathan Peters &copy;</p> -->
+	                         <div class="testmenu">
+	                         	 <?php
+				            		wp_nav_menu( array(
+						                'menu'              => 'primary',
+						                'theme_location'    => 'primary',
+						                'menu_id' 			=> 'primary-menu',
+						                'depth'             => 2,
+										//'container'         => 'div',
+						                'container_class'   => 'testmenu',
+										//'container_id'      => 'bs-example-navbar-collapse-1',
+						                'menu_class'      	=> 'nav navbar-collapse collapse',
+						                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						                'walker'            => new wp_bootstrap_navwalker())
+						            );
+						        ?>    
+	                         </div>
                         </div>
                     </div>
                 </div>
@@ -300,6 +316,25 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php //edit_post_link( __( 'Edit', 'ohmztech' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<!-- Card 1 Modal -->
+<div class="modal fade" id="card_1_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<iframe src="http://localhost/tests/NP/npwp/?page_id=79" />
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
