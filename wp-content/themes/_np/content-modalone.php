@@ -11,6 +11,12 @@
 		
 		<div class="entry-content">
 			<div class="container">
+				<a href="#aboutProject">
+					<div class="slideDown">
+						<!-- See More -->
+						<i class="fa fa-long-arrow-down"></i>
+					</div>
+				</a>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="laptop-container">
@@ -22,7 +28,7 @@
                         </div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" id="aboutProject">
 					<div class="col-md-6">
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
 

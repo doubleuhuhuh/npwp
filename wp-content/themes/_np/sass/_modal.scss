@@ -45,10 +45,22 @@
 
 .showCase {
 	background-color: rgba(0, 0, 0, .5);
+	background-color: $np-blue;
 	font-size: 18px;
 	color: $white;
 	padding-bottom: 20px;
 
+	.slideDown {
+		color: $white;
+		text-shadow: 2px 2px $np-red;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 50px;
+		top: 300px;
+		text-align: center;
+		font-size: 75px;
+	}
 	
 	.entry-content {
 		margin: 0;
