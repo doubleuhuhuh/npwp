@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 				atBegin: true,
 				livereload: true
 			},
-			sassOzt: {
+			sass: {
 				files: [
 					'wp-content/themes/_np/sass/*.scss',
 					'wp-content/themes/_np/sass/**/*.scss'

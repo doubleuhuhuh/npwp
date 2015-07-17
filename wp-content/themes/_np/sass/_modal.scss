@@ -51,15 +51,20 @@
 	padding-bottom: 20px;
 
 	.slideDown {
-		color: $white;
-		text-shadow: 2px 2px $np-red;
+		i {
+			color: $white;
+			text-shadow: 2px 2px $np-red;
+			font-size: 75px;
+		}
+		div {
+			color: $white;
+		}
 		width: 50px;
 		height: 50px;
 		position: absolute;
 		right: 50px;
 		top: 300px;
 		text-align: center;
-		font-size: 75px;
 	}
 	
 	.entry-content {
@@ -67,17 +72,33 @@
 	}
 
 	.laptop-container {
-		margin: 50px 0;
-		background-image: url("../img/laptop.png");
-		background-position: center; 
-		background-size: 992px 565px;
-		background-repeat: no-repeat;
-		height: 550px;
+		margin: 25px 0;
+		img {
+			width: 80%;
+			position: inherit;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
 
 
 		video {
-			margin-left: 122px;
-			margin-top: -92px;
+			margin-top: 3.5%;
+			position: absolute;
+			width: 54%;
+			margin-left: 49%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+	}
+}
+
+@media  (max-width : 992px) {
+	.showCase {
+		.laptop-container {
+
+			video {
+				margin-left: 48.7%;
+			}
 		}
 	}
 }

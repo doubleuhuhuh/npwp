@@ -111,7 +111,7 @@
 					<!-- CARD 1 -->
 						<div class="col-md-4">
 		                    <div class="flip-container hidden-xs ontouchstart="this.classList.toggle('hover');"">
-		                        <div class="flipper uau-flip">
+		                        <div class="flipper">
 		                            <div class="front">
 		                                <h3><?php echo get_field('card_title_1') ?></h3>
 		                                <h4><?php echo get_field('card_type_1') ?></h4>
@@ -121,8 +121,6 @@
 		                                <div class="portBrief">
 		                                	<?php echo get_field('card_description_back_1') ?>
 		                                </div>
-		                                
-		                                <!-- UpandUnderModal -->
 		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#card_1_modal">
 		                                  More Information
 		                                </button>
@@ -136,15 +134,14 @@
 		                        <div class="portBrief">
 		                        	<?php echo get_field('card_description_back_1') ?>
 		                        </div>
-		                        
-		                        <a href="http://www.theupandunderpub.com" target="_blank"><button type="button" class="btn btn-primary">Visit Website</button></a>
+		                        <a href="#" target="_blank"><button type="button" class="btn btn-primary">Visit Website</button></a>
 		                    </div>
 		                </div>
 		            <!-- END CARD 1 --> 
-		            <!-- CARD 2 -->   
-		                <div class="col-md-4">
+		            <!-- CARD 2 --> 
+		            	<div class="col-md-4">
 		                    <div class="flip-container hidden-xs ontouchstart="this.classList.toggle('hover');"">
-		                        <div class="flipper curb">
+		                        <div class="flipper">
 		                            <div class="front">
 		                                <h3><?php echo get_field('card_title_2') ?></h3>
 		                                <h4><?php echo get_field('card_type_2') ?></h4>
@@ -155,7 +152,7 @@
 		                                	<?php echo get_field('card_description_back_2') ?>
 		                                </div>
 		                                
-		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#curbModal">
+		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#card_2_modal">
 		                                  More Information
 		                                </button>
 		                            </div>
@@ -171,7 +168,7 @@
 		                        
 		                        <a href="http://www.theupandunderpub.com" target="_blank"><button type="button" class="btn btn-primary">Visit Website</button></a>
 		                    </div>
-		                </div>
+		                </div>  
 		            <!-- END CARD 2 -->
 		            <!-- CARD 3 -->  
 		                <div class="col-md-4">
@@ -186,7 +183,7 @@
 		                                <div class="portBrief">
 		                                	<?php echo get_field('card_description_back_3') ?>
 		                                </div>
-		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uauModal">
+		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#">
 		                                  More Information
 		                                </button>
 		                            </div>
@@ -203,11 +200,11 @@
 		                        <a href="http://www.theupandunderpub.com" target="_blank"><button type="button" class="btn btn-primary">Visit Website</button></a>
 		                    </div>
 		                </div>
+		            	 
 		            <!-- END CARD 3 -->   
 					</div> <!-- end row -->
 				</div> <!-- end container -->
-              
-			</div><!--  end portfolio -->
+            </div><!--  end portfolio -->
 			<div class="skillz frontPanels">
 				<div class="container">
                 <div class="row">
@@ -316,7 +313,6 @@
 	</div>
 
 	<footer class="entry-footer">
-		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
@@ -326,10 +322,10 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				<h4 class="modal-title" id="myModalLabel">Curb Appeal Concrete Specialist</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/tests/NP/npwp/?page_id=79" />
+				<iframe src="http://localhost/tests/NP/npwp/?page_id=79" /></iframe>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -338,3 +334,24 @@
 		</div>
 	</div>
 </div>
+
+<!-- END Card 1 Modal -->
+<!-- Card 2 Modal -->
+<div class="modal fade" id="card_2_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">The Up and Under Pub</h4>
+			</div>
+			<div class="modal-body">
+				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END Card 2 Modal -->
