@@ -183,7 +183,7 @@
 		                                <div class="portBrief">
 		                                	<?php echo get_field('card_description_back_3') ?>
 		                                </div>
-		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#">
+		                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#card_3_modal">
 		                                  More Information
 		                                </button>
 		                            </div>
@@ -270,16 +270,13 @@
                     <div class="col-md-6 col-md-offset-3 text-center socialIcons">
                         <ul class="list-inline">
                           
-                            <li class="linkedIn"><a target="_blank" href="http://www.linkedin.com/pub/nathan-peters/57/a93/991" alt="Linkedin"><i class="fa fa-linkedin fa-2x"></a></i>
+                            <li class="linkedIn"><a target="_blank" href="http://www.linkedin.com/pub/nathan-peters/57/a93/991" alt="Linkedin"><i class="fa fa-linkedin fa-3x"></a></i>
                             <!-- <li class="tumblr"><a target="_blank" href="http://knatep.tumblr.com/" alt="Tumblr"><i class="fa fa-tumblr fa-2x"></a></i> -->
-                            <li class="gplusIcon"><a target="_blank" href="https://plus.google.com/u/0/115855476981829756459/posts" alt="Google +"><i class="fa fa-google-plus fa-2x"></a></i>
-                            <li class="facebookIcon"><a target="_blank" href="https://www.facebook.com/doubleuhuhuh11" alt="Facebook"><i class="fa fa-facebook fa-2x"></a></i>
+                            <li class="gplusIcon"><a target="_blank" href="https://plus.google.com/u/0/115855476981829756459/posts" alt="Google +"><i class="fa fa-google-plus fa-3x"></a></i>
+                            <li class="facebookIcon"><a target="_blank" href="https://www.facebook.com/doubleuhuhuh11" alt="Facebook"><i class="fa fa-facebook fa-3x"></a></i>
                             <!-- <li class="wordPress"><a href="#" alt="Wordpress Blog"><i class="fa fa-wordpress fa-2x"></a></i> -->
-                            <li class="sentToMail"><a href="mailto:nate@natepeters.com" alt="Email Me"><i class="fa fa-envelope fa-2x"></a></i>
-        
-                           
-                            <!-- <li><a href="tel:414-313-4541" alt="Call Me"><i class="fa fa-phone fa-3x"></a></i> -->
-                            <!-- <li><a href="resume/resume-in.pdf" alt="Resume"><i class="fa fa-align-justify fa-3x"></a></i> -->
+                            <li class="sentToMail"><a href="mailto:nate@natepeters.com" alt="Email Me"><i class="fa fa-envelope fa-3x"></a></i>
+        					<!-- <li><a href="resume/resume-in.pdf" alt="Resume"><i class="fa fa-align-justify fa-3x"></a></i> -->
                         </ul>
                         <!-- TODO <div class="top-scroll">
                             <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
@@ -327,10 +324,6 @@
 			<div class="modal-body">
 				<iframe src="http://localhost/tests/NP/npwp/?page_id=79" /></iframe>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
 		</div>
 	</div>
 </div>
@@ -347,11 +340,22 @@
 			<div class="modal-body">
 				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
 		</div>
 	</div>
 </div>
 <!-- END Card 2 Modal -->
+<!-- Card 3 Modal -->
+<div class="modal fade" id="card_3_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Equipment Garage</h4>
+			</div>
+			<div class="modal-body">
+				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END Card 3 Modal -->
