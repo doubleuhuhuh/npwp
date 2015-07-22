@@ -28,3 +28,13 @@ $tumblr:				#395774;
 $instagram:				#4E433C;
 $gplus:					#C63D2D;
 $linkedin:				#4875B4;
+
+// .btn 
+.btn-primary {
+	background-color: $black;
+	color: $white;
+
+	&:hover {
+		background-color: $darker-gray;
+	}
+}

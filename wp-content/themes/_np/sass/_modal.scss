@@ -50,6 +50,18 @@
 	color: $white;
 	padding-bottom: 20px;
 
+	.nonWebsite	{
+		margin-top: 50px;
+
+		.row {
+			margin-bottom: 50px;
+		}
+	}
+	
+	.suplimentCopy {
+		margin-top: 50px;
+	}
+
 	.slideDown {
 		i {
 			color: $white;

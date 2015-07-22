@@ -6,14 +6,17 @@
  */
 ?>
 
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="loadingContainer"></div>
 	<div class="entry-content">
 		<div class="mainWrap">
 			<?php $landingImage = get_field('landing_image');?>
 			<div class="callOut" style="background-image: url(<?php echo $landingImage['url']; ?>)">
 				<div class="callOut-copy">
-					<h1><?php echo get_field('landing_copy_overlay_1') ?></h1>
-					<h2><?php echo get_field('landing_copy_overlay_2') ?></h2>
+					<h1 class="flipx"><?php echo get_field('landing_copy_overlay_1') ?></h1>
+					<h2 class="flipy"><?php echo get_field('landing_copy_overlay_2') ?></h2>
 				</div>	
 			</div>
 			<div class="navwrap">
@@ -23,26 +26,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<header id="masthead" class="site-header" role="banner">
-<!-- Org navigation  -->
-								<!-- <div class="site-branding">
-									<div class="col-md-2"> -->
-										<!-- <a class="site-title" href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home"> 
-										 -->	<?php
-
-											//$image = get_field('main_logo');
-
-											//if( !empty($image) ): ?>
-
-												<!-- <img class="main-logo" src="<?php //echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-	 -->
-											<?php //endif; ?>
-										<!-- </a>
-									</div>
-								</div> --><!-- .site-branding -->
-<!--  END Org navigation  -->
-								
 								<div class="npMenu">
-									
 									<ul class="list-inline">
 	                          
 			                            <a class="" target="_blank" href="#" alt="Linkedin">
@@ -338,7 +322,7 @@
 				<h4 class="modal-title" id="myModalLabel">The Up and Under Pub</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
+				<iframe src="http://localhost/tests/NP/npwp/modalsecond" /></iframe>
 			</div>
 		</div>
 	</div>

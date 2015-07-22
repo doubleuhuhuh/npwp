@@ -4,18 +4,60 @@
 /*===================================================================================*/
 
 
-$(document).ready(function(){ 	
+$(document).ready(function(){
+    $('.callOut-copy').css('display','none');
+ 
+
+    function loadingMask(){
+      $('.loadingContainer').css('display','none');
+    }
+    setTimeout(loadingMask, 3500);
+
+    
+    function callOutText() {
+
+        $('.callOut-copy').css('display','block');
+
+        $('.flipx').textillate({
+            in: {
+                effect: 'flipInX',
+                //delayScale: 2,
+                delay: 23,
+                shuffle: false,
+                sync: false
+            },
+            out: {
+                effect: 'FadeOutRightBig',
+                shuffle: false,
+                sync: true
+            }
+        });
+        $('.flipy').textillate({
+            in: {
+                effect: 'fadeInUp',
+                //delayScale: 2,
+                delay: 25,
+                shuffle: false,
+                sync: false
+            },
+            out: {
+                effect: 'FadeOutRightBig',
+                shuffle: false,
+                sync: true
+            }
+        }) 	
+    }
+
+    setTimeout(callOutText, 3510);
 
 	var styleBarH = $('.callOut').height()-145;    
 	$('.navbar').css('margin-top', styleBarH);
     
-    var navHeight = $('nav').height();
-    console.log(navHeight)
-
-
 	$(function(){
 	        // Check the initial Poistion of the Sticky Header
 	        var stickyHeaderTop = $('.navbar').offset().top;
+
+            console.log(stickyHeaderTop);
 	 
 	        $(window).scroll(function(){
                 if( $(window).scrollTop() > stickyHeaderTop ) {
@@ -47,13 +89,6 @@ $(document).ready(function(){
         autoplayTimeout:5000,
         autoplayHoverPause: true
 
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-
     });
     $("#egShirt").owlCarousel({
 
@@ -65,13 +100,6 @@ $(document).ready(function(){
         autoplayTimeout:5000,
         autoplayHoverPause: true
 
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
 
     });
     $("#egStationary").owlCarousel({
@@ -85,14 +113,10 @@ $(document).ready(function(){
         autoplayHoverPause: true
 
 
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-
     });
+
+
+
 });
 
 

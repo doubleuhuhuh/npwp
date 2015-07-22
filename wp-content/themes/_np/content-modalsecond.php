@@ -24,7 +24,7 @@
 						<div class="laptop-container">
 							<div class="video-container">
 	                            <video autoplay loop poster="" id="video">
-	                              	<source src="<?php echo get_template_directory_uri(); ?>/vid/curbappeal.mp4" type="video/mp4">
+	                              	<source src="<?php echo get_template_directory_uri(); ?>/vid/uau.mp4" type="video/mp4">
 	                              	<!-- <source src="movie.ogg" type="video/ogg"> -->
 	                            	Your browser does not support the video tag.
 	                            </video>
@@ -44,7 +44,9 @@
 
 						Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
 						/tests/NP/npwpDonec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Ae55an dignissim pellentesque felis.
-
+						
+						<a href="http://www.theupandunderpub.com" target="_blank"><button type="button" class="btn btn-primary">Visit Website</button></a>
+		                    
 					</div>
 				</div>
 			</div>
