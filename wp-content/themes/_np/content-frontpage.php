@@ -9,7 +9,12 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="loadingContainer"></div>
+	<div class="loadingContainer">
+		<div class="loadingImageContainer">
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/justLogo15.png" alt="" />
+		</div>
+
+	</div>
 	<div class="entry-content">
 		<div class="mainWrap">
 			<?php $landingImage = get_field('landing_image');?>

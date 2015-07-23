@@ -8,11 +8,11 @@ $(document).ready(function(){
     $('.callOut-copy').css('display','none');
  
 
-    function loadingMask(){
-      $('.loadingContainer').css('display','none');
-    }
-    setTimeout(loadingMask, 3500);
-
+    // function loadingMask(){
+    //   $('.loadingContainer').css('display','none');
+    // }
+    $( ".loadingMask" ).fadeOut( "slow")
+    //setTimeout(loadingMask, 3500);
     
     function callOutText() {
 

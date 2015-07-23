@@ -7,4 +7,20 @@
 	top:        0 !important; 
 	left:       0 !important; 
 	position:   fixed !important; 
+	
+	.loadingImageContainer {
+		margin-left: 50%;
+		margin-top: 20%;
+		transform: translatex(-50%);
+		width: 14%;
+
+		.loadingImage {
+		    -webkit-animation:spin 4s linear infinite;
+		    -moz-animation:spin 4s linear infinite;
+		    animation:spin 4s linear infinite;
+		}
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+		@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	}
 }
