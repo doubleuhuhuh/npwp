@@ -5,14 +5,14 @@
 
 
 $(document).ready(function(){
-    $('.callOut-copy').css('display','none');
- 
-
-    // function loadingMask(){
-    //   $('.loadingContainer').css('display','none');
-    // }
-    $( ".loadingMask" ).fadeOut( "slow")
-    //setTimeout(loadingMask, 3500);
+    
+    
+    function loadingMask(){
+        $('.loadingContainer').css('display','none');
+    
+    }
+    setTimeout(loadingMask, 2500);
+    // $( ".loadingMask" ).fadeOut( "slow")
     
     function callOutText() {
 
@@ -50,9 +50,21 @@ $(document).ready(function(){
 
     setTimeout(callOutText, 3510);
 
-	var styleBarH = $('.callOut').height()-145;    
-	$('.navbar').css('margin-top', styleBarH);
+
     
+
+    var landingImage = document.getElementById('#bgImage');
+
+    var width = landingImage.naturalHeight;
+
+    console.log(landingImage)
+    console.log(width)
+
+    var styleBarH = $('.callOut').height();    
+	$('.navbar').css('margin-top', styleBarH);
+
+    
+
 	$(function(){
 	        // Check the initial Poistion of the Sticky Header
 	        var stickyHeaderTop = $('.navbar').offset().top;
@@ -63,7 +75,9 @@ $(document).ready(function(){
                 if( $(window).scrollTop() > stickyHeaderTop ) {
                         $('.navbar').css({position: 'fixed', top: '0px'});
                         $('#stickyalias').css('display', 'block');
-                        $('#stickyalias').css('margin-top', styleBarH + 70);
+
+                        // TODO need to get the hieght of the image instead so this can be responsive
+                        $('#stickyalias').css('margin-top', styleBarH + 35 );
                         $('.navbar').css('margin-top', 0);
                         // Hide Callout BG on scroll down
                         $('.callOut').css('display', 'none');
@@ -77,20 +91,9 @@ $(document).ready(function(){
                 	}
 	        });
 	  });
+  
 
-
-    $("#egTruck").owlCarousel({
-
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause: true
-
-    });
-    $("#egShirt").owlCarousel({
+    $("#egRebrand").owlCarousel({
 
         navigation : true, // Show next and prev buttons
         slideSpeed : 300,
@@ -102,25 +105,18 @@ $(document).ready(function(){
 
 
     });
-    $("#egStationary").owlCarousel({
-
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause: true
-
-
-    });
-
-
 
 });
 
 
+$( window ).resize(function() {
+    
+    var styleBarH = $('.callOut').height()-145;    
+    $('.navbar').css('margin-top', styleBarH);
+    
+    console.log('resizing')
 
+});
 
 
 

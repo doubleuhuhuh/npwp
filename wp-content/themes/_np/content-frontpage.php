@@ -11,19 +11,25 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="loadingContainer">
 		<div class="loadingImageContainer">
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/justLogo15.png" alt="" />
+			<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/hexlogo.png">
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-gray.png" />
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-tan.png" />
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-blue.png" />
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-red.png" />
+			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-darkgray.png" />
 		</div>
 
 	</div>
 	<div class="entry-content">
 		<div class="mainWrap">
 			<?php $landingImage = get_field('landing_image');?>
-			<div class="callOut" style="background-image: url(<?php echo $landingImage['url']; ?>)">
-				<div class="callOut-copy">
-					<h1 class="flipx"><?php echo get_field('landing_copy_overlay_1') ?></h1>
-					<h2 class="flipy"><?php echo get_field('landing_copy_overlay_2') ?></h2>
-				</div>	
-			</div>
+				<div class="callOut">
+					<img id="bgImage" src="<?php echo get_template_directory_uri(); ?>/img/bg.jpg" />
+					<div class="callOut-copy">
+						<h1 class="flipx"><?php echo get_field('landing_copy_overlay_1') ?></h1>
+						<h2 class="flipy"><?php echo get_field('landing_copy_overlay_2') ?></h2>
+					</div>	
+				</div>
 			<div class="navwrap">
 				
 				<div id="stickyalias"></div>
@@ -311,7 +317,7 @@
 				<h4 class="modal-title" id="myModalLabel">Curb Appeal Concrete Specialist</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/tests/NP/npwp/?page_id=79" /></iframe>
+				<iframe src="http://localhost/npwp/?page_id=79"/></iframe>
 			</div>
 		</div>
 	</div>
@@ -327,7 +333,7 @@
 				<h4 class="modal-title" id="myModalLabel">The Up and Under Pub</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/tests/NP/npwp/modalsecond" /></iframe>
+				<iframe src="http://localhost/npwp/?page_id=101" /></iframe>
 			</div>
 		</div>
 	</div>
@@ -342,7 +348,7 @@
 				<h4 class="modal-title" id="myModalLabel">Equipment Garage</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
+				<iframe src="http://localhost/npwp/?page_id=84" /></iframe>
 			</div>
 		</div>
 	</div>

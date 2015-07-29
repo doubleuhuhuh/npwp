@@ -24,31 +24,31 @@
         color: white;
     }
     .home-btn {
-           background-image: linear-gradient(to top,  $darker-gray 50%, $white 50%);
+           background-image: linear-gradient(to top,  $darker-gray 50%, $off-white 50%);
     }
     .home-btn:hover {
         background-position: 0 -100%;
     }
     .intro-btn {
-        background-image: linear-gradient(to top, $np-red 50%, $white 50%);
+        background-image: linear-gradient(to top, $np-red 50%, $off-white 50%);
     }
     .intro-btn:hover {
         background-position: 0 -100%;
     }
     .portfolio-btn {
-        background-image: linear-gradient(to top, $np-blue 50%, $white 50%);
+        background-image: linear-gradient(to top, $np-blue 50%, $off-white 50%);
     }
     .portfolio-btn:hover {
         background-position: 0 -100%;
     }
     .contact-btn {
-        background-image: linear-gradient(to top, $np-tan 50%, $white 50%);
+        background-image: linear-gradient(to top, $np-tan 50%, $off-white 50%);
     }
     .contact-btn:hover {
         background-position: 0 -100%;
     }
     .blog-btn {
-        background-image: linear-gradient(to top, $np-gray 50%, $white 50%);
+        background-image: linear-gradient(to top, $np-gray 50%, $off-white 50%);
     }
     .blog-btn:hover {
         background-position: 0 -100%;
@@ -71,7 +71,8 @@ h3 {
 .mainWrap {
 	position:absolute;
     height:100%;
-    width:100%
+    width:100%;
+    margin-top: -15px;
 }
 
 .frontPanels {
@@ -83,11 +84,11 @@ h3 {
 }
 
 .callOut {
-	margin-top: -200px;
+    margin-top: -215px;
 	background-size: 100%;
     background-repeat: no-repeat;
   	width: 100%;
-  	height: 100%;
+  	height: auto;
     position:fixed;
     color: $np-red; 
     top: 70px;
@@ -97,12 +98,12 @@ h3 {
     	color: white;
     	margin-top: 275px;
     	text-shadow: 3px 3px #878787;
+        display: none;
     }
 }
 
+
 #styleBar {
-	// border-top: 1px solid black;
-	// border-bottom: 1px solid black;
 	height: 5px;
 }
 .styleBarFix {
@@ -115,7 +116,7 @@ h3 {
 	padding: 50px;
 	//margin-top: 58%;
 	width: 100%;
-	background-color: $white;
+	background-color: $off-white;
 	height: 300px;
 }
 
@@ -137,7 +138,7 @@ h3 {
 	display: table;
 	height: 400px;
 	width: 100%;
-	background: url(../img/callout.jpg) no-repeat center center fixed !important; 
+	background: url(../img/callout.jpg); 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -153,6 +154,6 @@ h3 {
 .contact {
 	height: 200px;
 	width: 100%;
-	background-color: white;
+	background-color: $off-white;
 	
 }

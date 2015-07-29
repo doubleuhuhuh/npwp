@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 				style: 'compressed',
 				compass: true
 			},
-			devOzt: {
+			development: {
 
 				options: {
 					sourcemap: 'auto'
@@ -31,16 +31,16 @@ module.exports = function(grunt) {
 				}
 
 			},
-			live: {
+			// live: {
 
-				options: {
-					sourcemap: 'none'
-				},
+			// 	options: {
+			// 		sourcemap: 'none'
+			// 	},
 
-				files: {
-					'wp-content/themes/_np/css/main.css': 'wp-content/themes/_np/sass/main.scss'
-				}
-			}
+			// 	files: {
+			// 		'wp-content/themes/_np/css/main.css': 'wp-content/themes/_np/sass/ozt-styles/screen.scss'
+			// 	}
+			// }
 		},
 
 		uglify: {
@@ -56,10 +56,10 @@ module.exports = function(grunt) {
 				src: 'wp-content/themes/_np/js/scripts/*',
 				dest: 'wp-content/themes/_np/js/app.min.js'
 			},
-			live: {
-				src: 'wp-content/themes/_np/js/scripts/*',
-				dest: 'wp-content/themes/_np/js/app.min.js'
-			}
+			// live: {
+			// 	src: 'wp-content/themes/_np/js/scripts/*',
+			// 	dest: 'wp-content/themes/_np/js/app.min.js'
+			// }
 		},
 
 		watch: {
@@ -73,12 +73,14 @@ module.exports = function(grunt) {
 					'wp-content/themes/_np/sass/**/*.scss'
 
 				],
-				tasks: ['sass:devOzt']
+				tasks: ['sass']
 			},
-			js: {
-				files: ['wp-content/themes/_np/js/scripts/*'],
-				tasks: ['uglify:dev']
-			}
+			uglify: {
+				files: [
+					'wp-content/themes/_np/js/scripts/*'
+				],
+				tasks: ['uglify']
+			},
 		}
 	});
 
