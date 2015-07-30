@@ -9,10 +9,9 @@ $(document).ready(function(){
     
     function loadingMask(){
         $('.loadingContainer').css('display','none');
-    
     }
+    
     setTimeout(loadingMask, 2500);
-    // $( ".loadingMask" ).fadeOut( "slow")
     
     function callOutText() {
 
@@ -50,18 +49,25 @@ $(document).ready(function(){
 
     setTimeout(callOutText, 3510);
 
+    $( window ).resize(function() {
+        console.log('we are resizing');
+        
+        var bgimage = $('#bgImage').height();
+        console.log('bgimage', bgimage);
 
-    
+        $('.navbar').css('margin-top', bgimage);
+    });
 
-    var landingImage = document.getElementById('#bgImage');
+    var npViewPort = $(window).height() - 35;
 
-    var width = landingImage.naturalHeight;
+    console.log('npViewPort:', npViewPort);
 
-    console.log(landingImage)
-    console.log(width)
+    var bgimage = $('#bgImage').height();
 
-    var styleBarH = $('.callOut').height();    
-	$('.navbar').css('margin-top', styleBarH);
+    console.log('bgimage', bgimage);
+
+   var styleBarH = $('.callOut').height();    
+	$('.navbar').css('margin-top', bgimage);
 
     
 
@@ -77,16 +83,16 @@ $(document).ready(function(){
                         $('#stickyalias').css('display', 'block');
 
                         // TODO need to get the hieght of the image instead so this can be responsive
-                        $('#stickyalias').css('margin-top', styleBarH + 35 );
+                        $('#stickyalias').css('margin-top', bgimage + 35 );
                         $('.navbar').css('margin-top', 0);
                         // Hide Callout BG on scroll down
-                        $('.callOut').css('display', 'none');
+                       // $('.callOut').css('display', 'none');
 					} else {
                         $('.navbar').css({position: 'static', top: '0px'});
                         $('#stickyalias').css('display', 'none');
                         $('.navbar').css('margin-top', styleBarH);
                         // Show Callout background on scroll up
-                        $('.callOut').css('display', 'block');
+                       // $('.callOut').css('display', 'block');
                         //$('.intro-copy').css('margin-top', 0):
                 	}
 	        });

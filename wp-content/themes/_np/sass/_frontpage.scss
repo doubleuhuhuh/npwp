@@ -84,19 +84,23 @@ h3 {
 }
 
 .callOut {
-    margin-top: -215px;
-	background-size: 100%;
-    background-repeat: no-repeat;
-  	width: 100%;
-  	height: auto;
-    position:fixed;
+	width: 100%;
+  	position:fixed;
     color: $np-red; 
-    top: 70px;
     z-index:-99;
+
+    #bgImage {
+        width: 100%;
+    }
     .callOut-copy {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 1;
     	text-align: center;
     	color: white;
-    	margin-top: 275px;
+    	margin-top: 200px;
     	text-shadow: 3px 3px #878787;
         display: none;
     }

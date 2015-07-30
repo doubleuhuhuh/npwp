@@ -23,8 +23,10 @@
 	<div class="entry-content">
 		<div class="mainWrap">
 			<?php $landingImage = get_field('landing_image');?>
-				<div class="callOut">
-					<img id="bgImage" src="<?php echo get_template_directory_uri(); ?>/img/bg.jpg" />
+				<div class="callOut" >
+
+					<img id="bgImage" src="<?php echo $landingImage['url']; ?>" />
+				
 					<div class="callOut-copy">
 						<h1 class="flipx"><?php echo get_field('landing_copy_overlay_1') ?></h1>
 						<h2 class="flipy"><?php echo get_field('landing_copy_overlay_2') ?></h2>
