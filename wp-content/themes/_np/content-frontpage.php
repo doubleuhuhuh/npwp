@@ -12,21 +12,24 @@
 	<div class="loadingContainer">
 		<div class="loadingImageContainer">
 			<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/hexlogo.png">
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-gray.png" />
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-tan.png" />
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-blue.png" />
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-red.png" />
-			<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-darkgray.png" />
+			<div class="hexContainer">
+				<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-gray.png" />
+				<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-tan.png" />
+				<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-blue.png" />
+				<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-red.png" />
+				<img class="loadingImage" src="<?php echo get_template_directory_uri(); ?>/img/hex-darkgray.png" />
+			</div>
 		</div>
 
 	</div>
-	<div class="entry-content">
+	<div class="entry-content" id="landing">
 		<div class="mainWrap">
 			<?php $landingImage = get_field('landing_image');?>
 				<div class="callOut" >
-
-					<img id="bgImage" src="<?php echo $landingImage['url']; ?>" />
-				
+					<img id="bgImage" src="<?php echo get_template_directory_uri(); ?>/img/bg.jpg" alt="">
+					
+<!-- 					<img id="bgImage" src="<?php echo $landingImage['url']; ?>" />
+ -->				
 					<div class="callOut-copy">
 						<h1 class="flipx"><?php echo get_field('landing_copy_overlay_1') ?></h1>
 						<h2 class="flipy"><?php echo get_field('landing_copy_overlay_2') ?></h2>
@@ -42,29 +45,29 @@
 								<div class="npMenu">
 									<ul class="list-inline">
 	                          
-			                            <a class="" target="_blank" href="#" alt="Linkedin">
+			                            <a class="" href="#landing">
 			                            	<li class="home-btn col-md-15">
 			                            		Home
 			                            	</li>
 			                            </a>
-			                            <a class="" target="_blank" href="#" alt="Linkedin">
+			                            <a class="" href="#intro">
 			                            	<li class="intro-btn col-md-15">
 			                            		Intro
 			                            	</li>
 			                            </a>
-			                            <a class="" target="_blank" href="#" alt="Linkedin">
+			                            <a class="" href="#portfolio">
 			                            	<li class="portfolio-btn col-md-15">
 			                            	 	Portfolio
 			                            	</li>
 			                            </a>
-			                            <a class="" target="_blank" href="#" alt="Linkedin">
+			                            <a class="" href="#skillz">
 			                            	<li class="contact-btn col-md-15">
-			                            		Contact
+			                            		Skills
 			                            	</li>
 			                            </a>
-			                            <a class="" target="_blank" href="#" alt="Linkedin">
+			                            <a class="" href="#contact">
 			                            	<li class="blog-btn col-md-15">
-			                            		Blog
+			                            		Contact
 			                            	</li>
 			                            </a>
 			                            
@@ -93,7 +96,7 @@
 					</div>
 				</nav>
 			</div>
-			<div class="intro-copy frontPanels">
+			<div class="intro-copy frontPanels" id="intro">
 				<h3><?php echo get_field('intro_copy') ?></h3>
 			</div>
 			<div class="portfolio frontPanels">
@@ -103,11 +106,11 @@
 					$card2logo = get_field('card_logo_2');
 					$card3logo = get_field('card_logo_3');
 				?>
-				<div class="container">
+				<div class="container" id="portfolio">
 					<div class="row">
 					<!-- CARD 1 -->
 						<div class="col-md-4">
-		                    <div class="flip-container hidden-xs ontouchstart="this.classList.toggle('hover');"">
+		                    <div class="flip-container ontouchstart="this.classList.toggle('hover');"">
 		                        <div class="flipper">
 		                            <div class="front">
 		                                <h3><?php echo get_field('card_title_1') ?></h3>
@@ -124,7 +127,7 @@
 		                            </div>
 		                        </div>
 		                    </div>
-		                    <div class="mob-port-container visible-xs">
+		                    <div class="mob-port-container">
 		                        <h3><?php echo get_field('card_title_1') ?></h3>
 		                        <h4><?php echo get_field('card_type_1') ?></h4>
 		                        <img class="uauLogo" src="<?php echo $card1logo['url']; ?>" alt="<?php echo $image['alt']; ?>">
@@ -137,7 +140,7 @@
 		            <!-- END CARD 1 --> 
 		            <!-- CARD 2 --> 
 		            	<div class="col-md-4">
-		                    <div class="flip-container hidden-xs ontouchstart="this.classList.toggle('hover');"">
+		                    <div class="flip-container ontouchstart="this.classList.toggle('hover');"">
 		                        <div class="flipper">
 		                            <div class="front">
 		                                <h3><?php echo get_field('card_title_2') ?></h3>
@@ -155,7 +158,7 @@
 		                            </div>
 		                        </div>
 		                    </div>
-		                    <div class="mob-port-container visible-xs">
+		                    <div class="mob-port-container">
 		                        <h3><?php echo get_field('card_title_2') ?></h3>
 		                        <h4><?php echo get_field('card_type_2') ?></h4>
 		                        <img class="uauLogo" src="<?php echo $card2logo['url']; ?>" alt="<?php echo $image['alt']; ?>">
@@ -169,7 +172,7 @@
 		            <!-- END CARD 2 -->
 		            <!-- CARD 3 -->  
 		                <div class="col-md-4">
-		                    <div class="flip-container hidden-xs ontouchstart="this.classList.toggle('hover');"">
+		                    <div class="flip-container ontouchstart="this.classList.toggle('hover');"">
 		                        <div class="flipper uau-flip">
 		                            <div class="front">
 		                                <h3><?php echo get_field('card_title_3') ?></h3>
@@ -186,7 +189,7 @@
 		                            </div>
 		                        </div>
 		                    </div>
-		                    <div class="mob-port-container visible-xs">
+		                    <div class="mob-port-container">
 		                        <h3><?php echo get_field('card_title_3') ?></h3>
 		                        <h4><?php echo get_field('card_type_3') ?></h4>
 		                        <img class="uauLogo" src="<?php echo $card3logo['url']; ?>" alt="<?php echo $image['alt']; ?>">
@@ -202,7 +205,7 @@
 					</div> <!-- end row -->
 				</div> <!-- end container -->
             </div><!--  end portfolio -->
-			<div class="skillz frontPanels">
+			<div class="skillz frontPanels" id="skillz">
 				<div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4 text-center">
@@ -256,7 +259,7 @@
 			<?php
 				$image = get_field('rollout_background_image');
 			?>
-			<div class="rollOut frontPanels">
+			<div class="rollOut frontPanels" id="contact">
 				<div class="rollout-copy">
 					<h1><?php echo get_field('rollout_text') ?></h1>
 					<h3><?php echo get_field('rollout_email') ?></h3>
@@ -275,30 +278,12 @@
                             <li class="sentToMail"><a href="mailto:nate@natepeters.com" alt="Email Me"><i class="fa fa-envelope fa-3x"></a></i>
         					<!-- <li><a href="resume/resume-in.pdf" alt="Resume"><i class="fa fa-align-justify fa-3x"></a></i> -->
                         </ul>
-                        <!-- TODO <div class="top-scroll">
+                        <!-- TODO scroll to top -->
+                        <!-- <div class="top-scroll">
                             <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
                         </div> -->
                         <hr>
-                        <div class="footerMenu">
-                        	<!-- <a href="#top">Home  </a>-<a href="#portfolio">  Portfolio  </a>-<a href="#about">  About  </a>-<a href="#callout">  Contact</a> -->
-	                        <!-- <p style="text-align:center;">Nathan Peters &copy;</p> -->
-	                         <div class="testmenu">
-	                         	 <?php
-				            		wp_nav_menu( array(
-						                'menu'              => 'primary',
-						                'theme_location'    => 'primary',
-						                'menu_id' 			=> 'primary-menu',
-						                'depth'             => 2,
-										//'container'         => 'div',
-						                'container_class'   => 'testmenu',
-										//'container_id'      => 'bs-example-navbar-collapse-1',
-						                'menu_class'      	=> 'nav navbar-collapse collapse',
-						                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						                'walker'            => new wp_bootstrap_navwalker())
-						            );
-						        ?>    
-	                         </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -319,7 +304,7 @@
 				<h4 class="modal-title" id="myModalLabel">Curb Appeal Concrete Specialist</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/?page_id=79"/></iframe>
+				<iframe src="http://localhost/npwp/modalone"/></iframe>
 			</div>
 		</div>
 	</div>
@@ -335,7 +320,7 @@
 				<h4 class="modal-title" id="myModalLabel">The Up and Under Pub</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/?page_id=101" /></iframe>
+				<iframe src="http://localhost/npwp/modalsecond" /></iframe>
 			</div>
 		</div>
 	</div>
@@ -350,7 +335,7 @@
 				<h4 class="modal-title" id="myModalLabel">Equipment Garage</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/?page_id=84" /></iframe>
+				<iframe src="http://localhost/npwp/modalthree" /></iframe>
 			</div>
 		</div>
 	</div>

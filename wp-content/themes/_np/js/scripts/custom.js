@@ -5,13 +5,24 @@
 
 
 $(document).ready(function(){
+
+
     
     
-    function loadingMask(){
-        $('.loadingContainer').css('display','none');
-    }
-    
-    setTimeout(loadingMask, 2500);
+
+    $('.loadingContainer').delay(2000).fadeOut('xslow'); 
+
+    var npViewPort = $(window).height() - 35;
+
+    console.log('npViewPort:', npViewPort);
+
+    var bgimage = $('#bgImage').height();
+
+    console.log('bgimage', bgimage);
+
+   var styleBarH = $('.callOut').height();    
+    $('.navwrap').css('margin-top', bgimage);
+
     
     function callOutText() {
 
@@ -47,27 +58,11 @@ $(document).ready(function(){
         }) 	
     }
 
-    setTimeout(callOutText, 3510);
+    setTimeout(callOutText, 2510);
 
-    $( window ).resize(function() {
-        console.log('we are resizing');
-        
-        var bgimage = $('#bgImage').height();
-        console.log('bgimage', bgimage);
+   
 
-        $('.navbar').css('margin-top', bgimage);
-    });
-
-    var npViewPort = $(window).height() - 35;
-
-    console.log('npViewPort:', npViewPort);
-
-    var bgimage = $('#bgImage').height();
-
-    console.log('bgimage', bgimage);
-
-   var styleBarH = $('.callOut').height();    
-	$('.navbar').css('margin-top', bgimage);
+    
 
     
 
@@ -97,8 +92,25 @@ $(document).ready(function(){
                 	}
 	        });
 	  });
-  
 
+     // Animate Scroll
+    $('a[href*=#]:not([href=#myCarousel])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+               if (target.length) {
+                 $('html,body').animate({
+                     scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+    
+  
+    //Image Carousel
     $("#egRebrand").owlCarousel({
 
         navigation : true, // Show next and prev buttons
@@ -115,15 +127,24 @@ $(document).ready(function(){
 });
 
 
-$( window ).resize(function() {
-    
-    var styleBarH = $('.callOut').height()-145;    
-    $('.navbar').css('margin-top', styleBarH);
-    
-    console.log('resizing')
 
-});
+// $( window ).resize(function() {
+    
+//     var styleBarH = $('.callOut').height()-145;    
+//     $('.navbar').css('margin-top', styleBarH);
+    
+//     console.log('resizing')
 
+// });
+
+ $( window ).resize(function() {
+        console.log('we are resizing');
+        
+        var bgimage = $('#bgImage').height();
+        console.log('bgimage', bgimage);
+
+        $('.navbar').css('margin-top', bgimage);
+    });
 
 
 

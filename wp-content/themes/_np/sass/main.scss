@@ -13,11 +13,13 @@
 @import 'mixins/anima.scss';
 @import 'mixins/flipper.scss';
 
-@import 'header.scss';
+
+@import 'nav.scss';
+@import 'landing.scss';
 @import 'frontpage.scss';
 @import 'footer.scss';
 @import 'portfolio.scss';
-@import 'modal.scss';
+// @import 'modal.scss';
 @import 'services.scss';
 
 

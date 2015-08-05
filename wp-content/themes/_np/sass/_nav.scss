@@ -1,0 +1,100 @@
+.npMenu {
+	ul {
+		margin-top: -15px;
+	}
+	.list-inline {
+		margin-left: 0 !important;
+	}
+   li {
+        background-size: 100% 200%;
+        -webkit-transition: background-position .5s;
+        -moz-transition: background-position .5s;
+        transition: background-position .5s;
+        text-align: center;
+        padding-left: 10px;
+        font-size: 2em;
+        
+    }
+    li:hover a {
+        color: white;
+    }
+    .home-btn {
+           background-image: linear-gradient(to top,  $darker-gray 50%, $off-white 50%);
+    }
+    .home-btn:hover {
+        background-position: 0 -100%;
+    }
+    .intro-btn {
+        background-image: linear-gradient(to top, $np-red 50%, $off-white 50%);
+    }
+    .intro-btn:hover {
+        background-position: 0 -100%;
+    }
+    .portfolio-btn {
+        background-image: linear-gradient(to top, $np-blue 50%, $off-white 50%);
+    }
+    .portfolio-btn:hover {
+        background-position: 0 -100%;
+    }
+    .contact-btn {
+        background-image: linear-gradient(to top, $np-tan 50%, $off-white 50%);
+    }
+    .contact-btn:hover {
+        background-position: 0 -100%;
+    }
+    .blog-btn {
+        background-image: linear-gradient(to top, $np-gray 50%, $off-white 50%);
+    }
+    .blog-btn:hover {
+        background-position: 0 -100%;
+    }
+}
+
+.navbar {
+	position: relative;
+	width: 100%;
+	border: none;
+	z-index: 1001;
+	margin-bottom: 0;
+	min-height: 35px;
+
+	.site-header {
+		background-color: $np-gray;
+	}
+
+	.main-logo {
+		width: 125px;
+		margin: 6px 0;
+	}
+
+	nav {
+		.nav-menu {
+			li {
+				padding: 10px;
+			}
+		}
+		
+		.menu-main-container {
+			float: right;
+			font-size: 16px;
+			padding: 10px 0;  
+		}
+	}   
+}
+
+#styleBar {
+	height: 5px;
+}
+.styleBarFix {
+	position: fixed;	
+	top: 100px;
+}
+
+
+@media (max-width: 992px) {
+    .navbar,{
+        display: none;
+    }
+
+
+}
