@@ -90,6 +90,8 @@
 			position: inherit;
 			margin-left: 50%;
 			transform: translateX(-50%);
+	        -ms-transform: translate(-50%); /* IE 9 */
+	        -webkit-transform: translate(-50%); /* Safari */
 		}
 
 
@@ -99,6 +101,8 @@
 			width: 54%;
 			margin-left: 49%;
 			transform: translateX(-50%);
+	        -ms-transform: translate(-50%); /* IE 9 */
+	        -webkit-transform: translate(-50%); /* Safari */
 			z-index: 1;
 		}
 	}

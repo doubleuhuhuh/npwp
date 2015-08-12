@@ -4,26 +4,49 @@
 /*===================================================================================*/
 
 
-$(document).ready(function(){
-
-
-    
-    
-
-    $('.loadingContainer').delay(2000).fadeOut('xslow'); 
-
-    var npViewPort = $(window).height() - 35;
-
-    console.log('npViewPort:', npViewPort);
-
+$( window ).load(function() {
+    // Get image height on LOAD
     var bgimage = $('#bgImage').height();
-
-    console.log('bgimage', bgimage);
-
-   var styleBarH = $('.callOut').height();    
+    // Set top margin
     $('.navwrap').css('margin-top', bgimage);
 
-    
+    // NAV Business 
+    $(function(){
+            // Check the initial Poistion of the Sticky Header
+            var stickyHeaderTop = $('.navbar').offset().top;
+
+            console.log('stickyHeaderTop',stickyHeaderTop);
+     
+            $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('.navbar').css({position: 'fixed', top: '0px'});
+                        $('#stickyalias').css('display', 'block');
+
+                        $('#stickyalias').css('margin-top', bgimage + 35 );
+                        $('.navbar').css('margin-top', 0);
+                        
+                    } else {
+                        $('.navbar').css({position: 'static', top: '0px'});
+                        $('#stickyalias').css('display', 'none');
+                        $('.navbar').css('margin-top', bgimage);
+                    }
+            });
+      });
+});
+
+
+$(document).ready(function(){
+
+   //Get Image Height again when page is ready
+   var bgimage = $('#bgImage').height(); 
+   // User Image Height to set margin
+   $('.navwrap').css('margin-top', bgimage);
+  
+   // Fade out Loading Overlay 
+   $('.loadingContainer').delay(2000).fadeOut('xslow'); 
+
+  
+    // Landing Text Load
     function callOutText() {
 
         $('.callOut-copy').css('display','block');
@@ -65,33 +88,28 @@ $(document).ready(function(){
     
 
     
+ //    // NAV Business 
+	// $(function(){
+	//         // Check the initial Poistion of the Sticky Header
+	//         var stickyHeaderTop = $('.navbar').offset().top;
 
-	$(function(){
-	        // Check the initial Poistion of the Sticky Header
-	        var stickyHeaderTop = $('.navbar').offset().top;
-
-            console.log(stickyHeaderTop);
+ //            console.log('stickyHeaderTop',stickyHeaderTop);
 	 
-	        $(window).scroll(function(){
-                if( $(window).scrollTop() > stickyHeaderTop ) {
-                        $('.navbar').css({position: 'fixed', top: '0px'});
-                        $('#stickyalias').css('display', 'block');
+	//         $(window).scroll(function(){
+ //                if( $(window).scrollTop() > stickyHeaderTop ) {
+ //                        $('.navbar').css({position: 'fixed', top: '0px'});
+ //                        $('#stickyalias').css('display', 'block');
 
-                        // TODO need to get the hieght of the image instead so this can be responsive
-                        $('#stickyalias').css('margin-top', bgimage + 35 );
-                        $('.navbar').css('margin-top', 0);
-                        // Hide Callout BG on scroll down
-                       // $('.callOut').css('display', 'none');
-					} else {
-                        $('.navbar').css({position: 'static', top: '0px'});
-                        $('#stickyalias').css('display', 'none');
-                        $('.navbar').css('margin-top', styleBarH);
-                        // Show Callout background on scroll up
-                       // $('.callOut').css('display', 'block');
-                        //$('.intro-copy').css('margin-top', 0):
-                	}
-	        });
-	  });
+ //                        $('#stickyalias').css('margin-top', bgimage + 35 );
+ //                        $('.navbar').css('margin-top', 0);
+                        
+	// 				} else {
+ //                        $('.navbar').css({position: 'static', top: '0px'});
+ //                        $('#stickyalias').css('display', 'none');
+ //                        $('.navbar').css('margin-top', bgimage);
+ //                    }
+	//         });
+	//   });
 
      // Animate Scroll
     $('a[href*=#]:not([href=#myCarousel])').click(function() {
@@ -137,14 +155,14 @@ $(document).ready(function(){
 
 // });
 
- $( window ).resize(function() {
-        console.log('we are resizing');
+ // $( window ).resize(function() {
+ //        console.log('we are resizing');
         
-        var bgimage = $('#bgImage').height();
-        console.log('bgimage', bgimage);
+ //        var bgimage = $('#bgImage').height();
+ //        console.log('bgimage', bgimage);
 
-        $('.navbar').css('margin-top', bgimage);
-    });
+ //        $('.navbar').css('margin-top', bgimage);
+ //    });
 
 
 

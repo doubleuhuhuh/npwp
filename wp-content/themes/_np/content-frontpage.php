@@ -304,7 +304,7 @@
 				<h4 class="modal-title" id="myModalLabel">Curb Appeal Concrete Specialist</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/modalone"/></iframe>
+				<iframe src="http://localhost/tests/NP/npwp/modalone"/></iframe>
 			</div>
 		</div>
 	</div>
@@ -320,7 +320,7 @@
 				<h4 class="modal-title" id="myModalLabel">The Up and Under Pub</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/modalsecond" /></iframe>
+				<iframe src="http://localhost/tests/NP/npwp/modalsecond" /></iframe>
 			</div>
 		</div>
 	</div>
@@ -335,7 +335,7 @@
 				<h4 class="modal-title" id="myModalLabel">Equipment Garage</h4>
 			</div>
 			<div class="modal-body">
-				<iframe src="http://localhost/npwp/modalthree" /></iframe>
+				<iframe src="http://localhost/tests/NP/npwp/modalthree" /></iframe>
 			</div>
 		</div>
 	</div>

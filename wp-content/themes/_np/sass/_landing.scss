@@ -13,9 +13,11 @@
         left: 50%;
         top: 200px;
         transform: translateX(-50%);
+        -ms-transform: translate(-50%); /* IE 9 */
+        -webkit-transform: translate(-50%); /* Safari */
         z-index: 1;
     	text-align: center;
-    	color: white;
+    	color: black;
     	text-shadow: 3px 3px #878787;
         display: none;
     }
